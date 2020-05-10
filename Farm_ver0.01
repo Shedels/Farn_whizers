@@ -1,0 +1,18 @@
+r = require("robot") 
+while true do 
+r.select(48)
+r.swing() 
+
+if r.space(48) == 32 then 
+
+for i = 4 , 48, 1 do
+  r.select(1)
+  if  r.compareTo(i) == false then   
+    r.select(i)
+    r.dropDown()
+  else 
+    print("mesto -> " ,r.space(48))
+end
+end
+end
+end
